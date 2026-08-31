@@ -6,7 +6,7 @@ function toggleMenu() {
 const stockStatus = {
   mk1: "In Stock",
   mk1a: "Out of Stock",
-  mk1a_ulr: "In Stock",
+  mk1a_ulr: "Out of Stock",
 };
 
 function updateStock() {
