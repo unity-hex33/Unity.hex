@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>unity.hex – Mk1 Family</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1 class="logo">unity.hex</h1>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <nav id="menu">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="https://github.com/unity-hex33/Unity.hex">GitHub Repo</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Mk1 Family</h2>
+
+    <section class="cards">
+
+      <div class="card">
+        <h3>Mk1</h3>
+        <p>Baseline airframe in the Mk1 family.</p>
+        <p class="stock" id="mk1-stock"></p>
+        <button class="btn" onclick="addToCart('Mk1')">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h3>Mk1A</h3>
+        <p>Improved Mk1 variant with refined tuning.</p>
+        <p class="stock" id="mk1a-stock"></p>
+        <button class="btn" onclick="addToCart('Mk1A')">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h3>Mk1A‑ULR</h3>
+        <p>Ultra‑Long Range configuration optimized for endurance.</p>
+        <p class="stock" id="mk1a-ulr-stock"></p>
+        <button class="btn" onclick="addToCart('Mk1A‑ULR')">Add to Cart</button>
+      </div>
+
+      <div class="card coming-soon">
+        <h3>Mk1‑B</h3>
+        <p>Next‑generation Mk1 platform.</p>
+        <span class="coming-label">Coming Soon</span>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    unity.hex · 2026
+  </footer>
+</body>
+</html>
