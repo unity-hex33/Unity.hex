@@ -4,213 +4,58 @@
   <meta charset="UTF-8">
   <title>unity.hex – Modular Utility Drones</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    :root {
-      --bg: #05060a;
-      --card: #0f1118;
-      --accent: #4fd1c5;
-      --accent-soft: #2c7a7b;
-      --text: #e2e8f0;
-      --muted: #a0aec0;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #1a202c 0, #05060a 55%);
-      color: var(--text);
-    }
-    header {
-      padding: 1.5rem 2rem;
-      border-bottom: 1px solid #1f2933;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 1.4rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--accent);
-    }
-    nav a {
-      color: var(--muted);
-      text-decoration: none;
-      margin-left: 1rem;
-      font-size: 0.9rem;
-    }
-    nav a:hover { color: var(--accent); }
-    main {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem 3rem;
-    }
-    .hero {
-      text-align: left;
-      margin-bottom: 2.5rem;
-    }
-    .hero h2 {
-      font-size: 2rem;
-      margin: 0 0 0.5rem;
-    }
-    .hero p {
-      margin: 0.25rem 0;
-      color: var(--muted);
-      max-width: 640px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-      margin-bottom: 2.5rem;
-    }
-    .card {
-      background: var(--card);
-      border-radius: 0.75rem;
-      padding: 1.25rem 1.4rem;
-      border: 1px solid #1f2933;
-    }
-    .card h3 {
-      margin: 0 0 0.4rem;
-      font-size: 1.1rem;
-    }
-    .badge {
-      display: inline-block;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      padding: 0.15rem 0.5rem;
-      border-radius: 999px;
-      background: rgba(79, 209, 197, 0.12);
-      color: var(--accent);
-      margin-bottom: 0.5rem;
-    }
-    .card p {
-      margin: 0.25rem 0;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-    ul.specs {
-      list-style: none;
-      padding: 0;
-      margin: 0.5rem 0 0;
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-    ul.specs li::before {
-      content: "• ";
-      color: var(--accent-soft);
-    }
-    section h2 {
-      font-size: 1.3rem;
-      margin: 0 0 0.75rem;
-    }
-    .license {
-      font-size: 0.9rem;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-    .license code {
-      background: #111827;
-      padding: 0.1rem 0.35rem;
-      border-radius: 0.35rem;
-      font-size: 0.85rem;
-    }
-    footer {
-      border-top: 1px solid #1f2933;
-      padding: 1rem 2rem;
-      font-size: 0.8rem;
-      color: var(--muted);
-      text-align: center;
-    }
-    @media (max-width: 640px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-      }
-      main { padding: 1.5rem 1.25rem 2.5rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
+
 <body>
   <header>
-    <h1>unity.hex</h1>
-    <nav>
-      <a href="#platform">Platform</a>
-      <a href="#airframes">Airframes</a>
+    <h1 class="logo">unity.hex</h1>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <nav id="menu">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="rtf-pnp.html">RTF / PNP</a>
       <a href="#license">License</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero" id="platform">
-      <h2>Modular utility drones for real work.</h2>
-      <p>unity.hex is an open‑source hardware platform for slow, stable, high‑payload multirotors —
-         sky tractors, flying cows, and endurance rigs built to be repaired, modified, and understood.</p>
-      <p>Designed for hobbyists, tinkerers, and small‑scale utility missions who care more about
-         reliability and openness than raw speed.</p>
+    <section class="hero">
+      <h2>Open‑source modular utility drones.</h2>
+      <p>Slow, stable, high‑payload multirotors built for real work — mapping, inspection,
+         endurance missions, and experimentation.</p>
     </section>
 
-    <section id="airframes">
-      <h2>Airframe lineup</h2>
-      <div class="grid">
-        <article class="card">
-          <span class="badge">Mk1 — Entry</span>
-          <h3>Mk1 Utility Quad</h3>
-          <p>Affordable, repairable F450‑class quad for learning, testing payloads, and general
-             utility flying.</p>
-          <ul class="specs">
-            <li>F450 frame, 2217 950KV motors, 10×4.5 props</li>
-            <li>4S LiPo or 4S2P 21700 Li‑ion, XT60</li>
-            <li>Radiolink F405 flight controller, ATGM336H GPS</li>
-            <li>ELRS receiver + Radiomaster Pocket transmitter</li>
-          </ul>
-        </article>
+    <section class="cards">
+      <div class="card">
+        <h3>Mk1 Utility Quad</h3>
+        <p>Entry‑level F450‑class utility quad. Repairable, moddable, reliable.</p>
+        <a class="btn" href="products.html">View Details</a>
+      </div>
 
-        <article class="card">
-          <span class="badge">Mk3 — Flagship</span>
-          <h3>Mk3 Payload / Endurance</h3>
-          <p>Heavier “flying cow” configuration tuned for slow flight, long missions, and
-             real‑world payloads.</p>
-          <ul class="specs">
-            <li>High‑capacity 4S packs (LiPo or 21700 Li‑ion)</li>
-            <li>Optimized for mapping, inspection, and utility work</li>
-            <li>Modular mounts for cameras, sensors, and cargo</li>
-            <li>Built to stay open‑source and community‑driven</li>
-          </ul>
-        </article>
+      <div class="card">
+        <h3>Mk3 Endurance</h3>
+        <p>Heavy “flying cow” configuration for long missions and payloads.</p>
+        <a class="btn" href="products.html">View Details</a>
+      </div>
 
-        <article class="card">
-          <span class="badge">Platform</span>
-          <h3>Open‑source, not throwaway</h3>
-          <p>Frames, wiring, configs, and documentation are published so you can rebuild,
-             extend, or fork the platform without guessing.</p>
-          <ul class="specs">
-            <li>CAD, BOM, and FC configs in the GitHub repo</li>
-            <li>Focus on repairability over disposability</li>
-            <li>Designed for slow, stable, high‑payload flight</li>
-            <li>Community modifications encouraged and documented</li>
-          </ul>
-        </article>
+      <div class="card">
+        <h3>RTF / PNP Options</h3>
+        <p>Choose how you want your unity.hex drone delivered.</p>
+        <a class="btn" href="rtf-pnp.html">Choose Options</a>
       </div>
     </section>
 
-    <section id="license">
-      <h2>License & attribution</h2>
-      <div class="card license">
-        <p>This project is released as open hardware under
-           <code>CERN‑OHL‑S v2 (Strongly Reciprocal)</code>.</p>
-        <p>Anyone who sells or distributes modified versions must:</p>
-        <ul class="specs">
-          <li>credit the original author: <strong>Kubo / unity.hex</strong></li>
-          <li>publish their modifications and source files</li>
-          <li>keep their version open‑source under the same licence,
-              unless explicit permission is granted</li>
-        </ul>
-        <p>See the <code>LICENSE</code> file in the repository for full legal details.</p>
-      </div>
+    <section id="license" class="license">
+      <h2>License</h2>
+      <p>This project is licensed under <strong>CERN‑OHL‑S v2</strong>.</p>
+      <p>Anyone who sells or distributes modified versions must:</p>
+      <ul>
+        <li>credit the original author (Kubo / unity.hex)</li>
+        <li>publish their modifications</li>
+        <li>keep their version open‑source unless permission is granted</li>
+      </ul>
     </section>
   </main>
 
