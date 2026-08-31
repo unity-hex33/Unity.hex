@@ -1,0 +1,66 @@
+CERN Open Hardware Licence Version 2 - Strongly Reciprocal
+
+Preamble
+
+CERN has developed this licence to promote collaboration among hardware designers and to provide a legal framework that supports open hardware design and distribution. The CERN-OHL-S is intended for designs that are meant to stay open and to ensure that improvements remain available to the community.
+
+1 Definitions
+
+In this Licence, the following terms shall have the following meanings:
+
+“License” means this CERN-OHL-S Version 2.
+
+“Documentation” means schematic diagrams, designs, circuit or circuit board layouts, mechanical drawings, flow charts, descriptive text, and other explanatory material that is explicitly stated as being released under the terms of this Licence.
+
+“Product” means any device, component, or physical object manufactured using the Documentation or modified Documentation.
+
+“Modified Documentation” means any Documentation that you have modified, adapted, or made derivative works of.
+
+“Source” means the preferred form of the Documentation for making modifications to it.
+
+2 Grant of Licence
+
+You are granted the right to:
+
+a) Use the Documentation to manufacture Products.
+
+b) Modify the Documentation and create Modified Documentation.
+
+c) Distribute the Documentation, Modified Documentation, and Products under the terms of this Licence.
+
+3 Conditions for Distribution
+
+If you distribute Documentation, Modified Documentation, or Products, you must:
+
+a) Provide a copy of this Licence.
+
+b) Provide the Source of the Documentation or Modified Documentation.
+
+c) Clearly identify any modifications you have made.
+
+d) License any Modified Documentation under the terms of this Licence.
+
+e) Ensure that any Product you distribute includes information on how to obtain the Source.
+
+4 Strong Reciprocity
+
+Any Modified Documentation you distribute must remain under this Licence. You may not impose any additional restrictions on the rights granted by this Licence.
+
+You may not distribute Modified Documentation or Products under a closed or proprietary licence unless explicit permission is granted by the original licensor.
+
+5 No Warranty
+
+The Documentation is provided “as is,” without warranty of any kind, express or implied. The entire risk as to the quality and performance of the Documentation or Products is with you.
+
+6 Limitation of Liability
+
+In no event will the licensors be liable for any damages arising from the use or inability to use the Documentation or Products.
+
+7 Acceptance
+
+By using, modifying, or distributing the Documentation or Products, you indicate your acceptance of this Licence.
+
+8 Copyright Notice
+
+Copyright © 2026 Kubo / unity.hex
+Released under the CERN-OHL-S v2.
